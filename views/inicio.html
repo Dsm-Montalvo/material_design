@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+        // Mostrar la notificación si existe un mensaje de error
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const errorMessage = params.get('error');
+
+            if (errorMessage) {
+                document.getElementById('notification-message').innerText = errorMessage;
+                document.getElementById('notification').classList.remove('hidden');
+            }
+        }
+
+        // Función para cerrar la notificación
+        function closeNotification() {
+            document.getElementById('notification').classList.add('hidden');
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Mi Portal Web</h1>
+            <nav class="space-x-4">
+                <a href="/" class="hover:underline p-2 rounded">Inicio</a>
+                <a href="sitio.html" class="hover:underline p-2 rounded">Sitio Web</a>
+                <a href="inicio.html" class="hover:underline p-2 rounded bg-blue-700">Sistema Web</a>
+                <a href="catalogo.html" class="hover:underline p-2 rounded">Catálogo</a>
+                <a href="contacto.html" class="hover:underline p-2 rounded">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+            <h2 class="text-2xl font-bold text-center mb-6">Iniciar Sesión</h2>
+            <form action="/login" method="POST">
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required class="w-full p-2 border border-gray-300 rounded mt-1">
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-sm font-medium text-gray-700">Contraseña:</label>
+                    <input type="password" id="password" name="password" required class="w-full p-2 border border-gray-300 rounded mt-1">
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Iniciar Sesión</button>
+            </form>
+             <!-- Botones adicionales con estilo -->
+             <div class="flex justify-between mt-4">
+                <a href="/" class="bg-red-200 text-gray-700 hover:bg-gray-300 p-2 rounded shadow">Cancelar</a>
+                <a href="/register.html" class="bg-green-200 text-gray-700 hover:bg-gray-300 p-2 rounded shadow">Crear Cuenta</a>
+            </div>
+        </div>
+    </div>
+    
+     <!-- Notificación flotante -->
+     <div id="notification" class="fixed bottom-4 right-4 bg-red-600 text-white p-4 rounded-lg hidden z-50">
+        <span id="notification-message"></span>
+        <button onclick="closeNotification()" class="ml-4 font-bold">&times;</button>
+    </div>
+</body>
+</html>

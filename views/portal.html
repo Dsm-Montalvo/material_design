@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Encabezado -->
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Mi Portal Web</h1>
+            <nav class="space-x-4">
+                <a href="/" class="hover:underline p-2 rounded bg-blue-700">Inicio</a>
+                <a href="sitio.html" class="hover:underline p-2 rounded">Sitio Web</a>
+                <a href="inicio.html" class="hover:underline p-2 rounded">Sistema Web</a>
+                <a href="catalogo.html" class="hover:underline p-2 rounded">Catálogo</a>
+                <a href="contacto.html" class="hover:underline p-2 rounded">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="bg-blue-500 text-white py-20 text-center">
+        <h2 class="text-4xl font-bold">Bienvenido a Nuestro Portal</h2>
+        <p class="mt-4">Explora nuestras soluciones y servicios.</p>
+        <a href="sitio.html" class="mt-8 inline-block bg-white text-blue-600 px-6 py-3 rounded-lg shadow-md hover:bg-gray-200">Más Información</a>
+    </section>
+
+    <!-- Contenido Destacado -->
+    <section class="py-12">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="images/gallery1.jpg" alt="Imagen 1" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="text-xl font-semibold">Servicio 1</h3>
+                <p class="mt-2">Descripción del servicio 1.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="images/gallery2.jpg" alt="Imagen 1" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="text-xl font-semibold">Servicio 2</h3>
+                <p class="mt-2">Descripción del servicio 2.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="images/gallery3.jpg" alt="Imagen 1" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="text-xl font-semibold">Servicio 3</h3>
+                <p class="mt-2">Descripción del servicio 3.</p>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Pie de página -->
+    <footer class="bg-blue-600 text-white text-center p-4">
+        <p>&copy; 2024 Mi Portal Web. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

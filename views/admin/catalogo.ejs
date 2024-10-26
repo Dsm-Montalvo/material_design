@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Bienvenido, <%= email %>!</h1>
+            <nav class="space-x-4">
+                <a href="/inicioadmin" class="hover:underline p-2 rounded">administrador</a>
+                <a href="/admin/" class="hover:underline p-2 rounded">Inicio</a>
+                <a href="/admin/sitio" class="hover:underline p-2 rounded">Sitio Web</a>
+                <a href="/admin/catalogo" class="hover:underline p-2 rounded bg-blue-700">Catálogo</a>
+                <form action="/logout" method="POST" class="inline">
+                    <button type="submit" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded">Cerrar Sesión</button>
+                </form>
+            </nav>
+        </div>
+    </header>
+
+    <section class="py-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6">Nuestros Productos y Servicios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Producto 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="../images/product1.jpg" alt="Producto 1" class="w-full h-48 object-cover mb-4">
+                    <h3 class="text-xl font-semibold">Producto 1</h3>
+                    <p class="mt-2">Descripción breve del producto 1.</p>
+                    <p class="mt-4 text-blue-600 font-bold">$99.99</p>
+                    <a href="/admin/producto1" class="mt-4 inline-block bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Más información</a>
+                </div>
+                <!-- Producto 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="../images/product2.jpg" alt="Producto 2" class="w-full h-48 object-cover mb-4">
+                    <h3 class="text-xl font-semibold">Producto 2</h3>
+                    <p class="mt-2">Descripción breve del producto 2.</p>
+                    <p class="mt-4 text-blue-600 font-bold">$199.99</p>
+                    <a href="/admin/producto2" class="mt-4 inline-block bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Más información</a>
+                </div>
+                <!-- Producto 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="../images/product3.jpg" alt="Producto 3" class="w-full h-48 object-cover mb-4">
+                    <h3 class="text-xl font-semibold">Producto 3</h3>
+                    <p class="mt-2">Descripción breve del producto 3.</p>
+                    <p class="mt-4 text-blue-600 font-bold">$299.99</p>
+                    <a href="/admin/producto3" class="mt-4 inline-block bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Más información</a>
+                </div>
+                <!-- Más productos se pueden agregar aquí -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-600 text-white text-center p-4">
+        <p>&copy; 2024 Catálogo. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

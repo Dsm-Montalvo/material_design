@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Encabezado similar al de portal.html -->
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Bienvenido, <%= email %>!</h1>
+            <nav class="space-x-4">
+                <a href="/inicioadmin" class="hover:underline p-2 rounded">administrador</a>
+                <a href="/admin/" class="hover:underline p-2 rounded">Inicio</a>
+                <a href="/admin/sitio" class="hover:underline p-2 rounded bg-blue-700">Sitio Web</a>
+                <a href="/admin/catalogo" class="hover:underline p-2 rounded">Catálogo</a>
+                <form action="/logout" method="POST" class="inline">
+                    <button type="submit" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded">Cerrar Sesión</button>
+                </form>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <section class="py-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-4">Sobre Nosotros</h2>
+            <p class="mb-6">Información detallada sobre nuestros servicios y productos.</p>
+            <!-- Más contenido aquí -->
+        </div>
+    </section>
+
+    <!-- Pie de página similar al de portal.html -->
+    <footer class="bg-blue-600 text-white text-center p-4">
+        <p>&copy; 2024 Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
